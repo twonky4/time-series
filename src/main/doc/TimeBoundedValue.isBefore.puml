@@ -1,0 +1,9 @@
+@startuml
+hide time-axis
+concise "isBefore" as V
+
+V is self
+
+@V
+0 is other
+@enduml
