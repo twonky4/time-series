@@ -1,0 +1,57 @@
+@startuml
+hide time-axis
+concise "without gaps" as V
+concise "with gaps" as G
+concise "with start" as S
+concise "with end" as E
+concise "with borders" as B
+concise "with start and gaps" as SG
+concise "with end and gaps" as EG
+concise "with borders and gaps" as BG
+
+V is other
+G is other
+S is {-}
+E is other
+B is {-}
+SG is {-}
+EG is other
+BG is {-}
+
+@V
+0 is self
+
+@G
+0 is {-}
+1 is self
+
+@S
+0 is other
+1 is self
+
+@E
+1 is self
+2 is {-}
+
+@B
+0 is other
+1 is self
+2 is {-}
+
+@SG
+0 is other
+1 is {-}
+2 is self
+
+@EG
+1 is {-}
+2 is self
+3 is {-}
+
+@BG
+0 is other
+1 is {-}
+2 is self
+3 is {-}
+
+@enduml

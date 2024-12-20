@@ -1,0 +1,45 @@
+@startuml
+hide time-axis
+concise "without borders" as N1
+concise " " as N2
+concise " " as Z1
+concise "with borders" as B1
+concise " " as B2
+concise " " as Z2
+concise "with start" as S1
+concise " " as S2
+concise " " as Z3
+concise "with end" as E1
+concise " " as E2
+
+N1 is "self"
+N2 is "other"
+
+B1 is {-}
+B2 is {-}
+S1 is {-}
+S2 is {-}
+E1 is "self"
+E2 is "other"
+
+@B1
+0 is "self"
+1 is {-}
+
+@B2
+0 is "other"
+1 is {-}
+
+@S1
+0 is "self"
+
+@S2
+0 is "other"
+
+@E1
+0 is {-}
+
+@E2
+0 is {-}
+
+@enduml

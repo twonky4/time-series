@@ -1,4 +1,7 @@
 package de.viseit;
 
-public final class TimeSeries {
+import java.util.List;
+
+public class TimeSeries {
+	private List<TimeBoundedValue> values;
 }
