@@ -116,6 +116,9 @@ public class TimeWindow implements Comparable<TimeWindow> {
 
 	/**
 	 * Calculates the overlap between this TimeWindow and another TimeWindow.
+	 * <p>
+	 * <img src=
+	 * "https://github.com/twonky4/time-series/blob/main/src/main/doc/TimeWindow.getOverlap.png?raw=true">
 	 */
 	public Optional<TimeWindow> getOverlap(@NonNull TimeWindow other) {
 		ZonedDateTime overlapStart;
@@ -139,6 +142,9 @@ public class TimeWindow implements Comparable<TimeWindow> {
 
 	/**
 	 * Splits this TimeWindow and another TimeWindow into distinct non-overlapping ranges.
+	 * <p>
+	 * <img src=
+	 * "https://github.com/twonky4/time-series/blob/main/src/main/doc/TimeWindow.splitByOverlap.png?raw=true">
 	 */
 	public List<TimeWindow> splitByOverlap(@NonNull TimeWindow other) {
 		List<TimeWindow> result = new ArrayList<>();

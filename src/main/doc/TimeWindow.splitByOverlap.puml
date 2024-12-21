@@ -1,0 +1,64 @@
+@startgantt
+Project starts 2020-07-01
+[self] as [s0] starts 2020-07-01 and ends 2020-07-10
+[other] as [o0] starts 2020-07-01 and ends 2020-07-10
+[result] as [r0] starts 2020-07-01 and ends 2020-07-10
+--
+[self] as [s1] starts 2020-07-01 and ends 2020-07-10
+[other] as [o1] starts 2020-07-04 and ends 2020-07-07
+[result] as [r1a] starts 2020-07-01 and ends 2020-07-03
+[result] as [r1b] starts 2020-07-04 and ends 2020-07-07
+[result] as [r1c] starts 2020-07-08 and ends 2020-07-10
+--
+[self] as [s2] starts 2020-07-04 and ends 2020-07-07
+[other] as [o2] starts 2020-07-01 and ends 2020-07-10
+[result] as [r2a] starts 2020-07-01 and ends 2020-07-03
+[result] as [r2b] starts 2020-07-04 and ends 2020-07-07
+[result] as [r2c] starts 2020-07-08 and ends 2020-07-10
+--
+[self] as [s3] starts 2020-07-01 and ends 2020-07-07
+[other] as [o3] starts 2020-07-04 and ends 2020-07-10
+[result] as [r3a] starts 2020-07-01 and ends 2020-07-03
+[result] as [r3b] starts 2020-07-04 and ends 2020-07-07
+[result] as [r3c] starts 2020-07-08 and ends 2020-07-10
+--
+[self] as [s4] starts 2020-07-04 and ends 2020-07-10
+[other] as [o4] starts 2020-07-01 and ends 2020-07-07
+[result] as [r4a] starts 2020-07-01 and ends 2020-07-03
+[result] as [r4b] starts 2020-07-04 and ends 2020-07-07
+[result] as [r4c] starts 2020-07-08 and ends 2020-07-10
+--
+[self] as [s5] starts 2020-07-04 and ends 2020-07-07
+[other] as [o5] starts 2020-07-04 and ends 2020-07-07
+[result] as [r5] starts 2020-07-04 and ends 2020-07-07
+--
+[self] as [s6] starts 2020-07-02 and ends 2020-07-09
+[other] as [o6] starts 2020-07-04 and ends 2020-07-07
+[result] as [r6a] starts 2020-07-02 and ends 2020-07-03
+[result] as [r6b] starts 2020-07-04 and ends 2020-07-07
+[result] as [r6c] starts 2020-07-08 and ends 2020-07-09
+--
+[self] as [s7] starts 2020-07-04 and ends 2020-07-07
+[other] as [o7] starts 2020-07-02 and ends 2020-07-09
+[result] as [r7a] starts 2020-07-02 and ends 2020-07-03
+[result] as [r7b] starts 2020-07-04 and ends 2020-07-07
+[result] as [r7c] starts 2020-07-08 and ends 2020-07-09
+--
+[self] as [s8] starts 2020-07-02 and ends 2020-07-04
+[other] as [o8] starts 2020-07-03 and ends 2020-07-05
+[result] as [r8a] starts 2020-07-02 and ends 2020-07-02
+[result] as [r8b] starts 2020-07-03 and ends 2020-07-04
+[result] as [r8c] starts 2020-07-05 and ends 2020-07-05
+--
+[self] as [s9] starts 2020-07-03 and ends 2020-07-05
+[other] as [o9] starts 2020-07-02 and ends 2020-07-04
+[result] as [r9a] starts 2020-07-02 and ends 2020-07-02
+[result] as [r9b] starts 2020-07-03 and ends 2020-07-04
+[result] as [r9c] starts 2020-07-05 and ends 2020-07-05
+--
+[self] as [s10] starts 2020-07-03 and ends 2020-07-04
+[other] as [o10] starts 2020-07-02 and ends 2020-07-10
+[result] as [r10a] starts 2020-07-02 and ends 2020-07-02
+[result] as [r10b] starts 2020-07-03 and ends 2020-07-04
+[result] as [r10c] starts 2020-07-05 and ends 2020-07-10
+@endgantt
