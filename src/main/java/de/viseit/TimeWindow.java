@@ -2,6 +2,9 @@ package de.viseit;
 
 import java.time.DateTimeException;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -109,5 +112,61 @@ public class TimeWindow implements Comparable<TimeWindow> {
 		}
 
 		return 0;
+	}
+
+	/**
+	 * Calculates the overlap between this TimeWindow and another TimeWindow.
+	 */
+	public Optional<TimeWindow> getOverlap(@NonNull TimeWindow other) {
+		ZonedDateTime overlapStart;
+		if (start == null || other.start == null) {
+			overlapStart = start != null ? start : other.start;
+		} else {
+			overlapStart = start.isAfter(other.start) ? start : other.start;
+		}
+		ZonedDateTime overlapEnd;
+		if (end == null || other.end == null) {
+			overlapEnd = end != null ? end : other.end;
+		} else {
+			overlapEnd = end.isBefore(other.end) ? end : other.end;
+		}
+		if (overlapStart != null && overlapEnd != null && overlapStart.isAfter(overlapEnd)) {
+			return Optional.empty();
+		}
+
+		return Optional.of(new TimeWindow(overlapStart, overlapEnd));
+	}
+
+	/**
+	 * Splits this TimeWindow and another TimeWindow into distinct non-overlapping ranges.
+	 */
+	public List<TimeWindow> splitByOverlap(@NonNull TimeWindow other) {
+		List<TimeWindow> result = new ArrayList<>();
+
+		Optional<TimeWindow> overlap = getOverlap(other);
+		if (overlap.isPresent()) {
+			TimeWindow overlapWindow = overlap.get();
+
+			if (start != null && (overlapWindow.getStart() == null || start.isBefore(overlapWindow.getStart()))) {
+				result.add(new TimeWindow(start, overlapWindow.getStart()));
+			}
+
+			if (end != null && (overlapWindow.getEnd() == null || end.isAfter(overlapWindow.getEnd()))) {
+				result.add(new TimeWindow(overlapWindow.getEnd(), end));
+			}
+
+			if (other.start != null && (overlapWindow.getStart() == null || other.start.isBefore(overlapWindow.getStart()))) {
+				result.add(new TimeWindow(other.start, overlapWindow.getStart()));
+			}
+
+			if (other.end != null && (overlapWindow.getEnd() == null || other.end.isAfter(overlapWindow.getEnd()))) {
+				result.add(new TimeWindow(overlapWindow.getEnd(), other.end));
+			}
+		} else {
+			result.add(new TimeWindow(start, end));
+			result.add(new TimeWindow(other.start, other.end));
+		}
+
+		return result;
 	}
 }
